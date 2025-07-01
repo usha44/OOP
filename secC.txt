@@ -1,0 +1,20 @@
+a. final keyword
+The final keyword in Java is used to make something constant. 
+If we use final with a variable, its value can not be changed. 
+If we use it with a method, it can not be overridden, and with a class, it can not be inherited.
+Example: final int x = 10; means x can not be changed.
+
+b. Getter and Setter Methods
+Getter and Setter methods are used to get and set values of private variables in a class. 
+They help in hiding the data (encapsulation). 
+The getter method returns the value, and the setter method updates it.
+Example: getName() to get a name and setName() to set it.
+
+c. Inheritance
+Inheritance is a concept where one class can use the features (like variables and methods) of another class. 
+It helps to reuse code. We use the extends keyword to do inheritance.
+Example: class Dog extends Animal means Dog gets features of Animal.
+
+d. try-catch block
+The try-catch block is used in Java to handle errors during program execution. We write risky code in try, and if it causes an error, catch runs and shows a message instead of crashing the program.
+Example: try { int a = 5/0; } catch (Exception e) { }

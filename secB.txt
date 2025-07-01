@@ -1,0 +1,22 @@
+1. Explain the difference between abstract class and interface in Java. Provide one example for
+each.
+
+An abstract class in Java is a class that can have both normal methods and abstract methods (methods without a body). 
+It can also have variables and constructors. We use abstract classes when we want to share common code among related classes. 
+On the other hand, an interface only has method declarations by default, and classes that use it must provide the method body. 
+Interfaces are mainly used to define rules or capabilities that other classes can follow. 
+One main difference is that a class can only extend one abstract class, but it can implement many interfaces. 
+For example, we can have an abstract class Animal with a method eat(), and a class Dog can extend it and add its own behavior. 
+Similarly, an interface Flyable can have a method fly(), and a class Bird can implement it to show how birds fly.
+
+2. Describe the concept of polymorphism in Java with suitable examples. Differentiate between
+compile-time and runtime polymorphism.
+
+Polymorphism in Java means one thing behaving in different ways. 
+It lets the same method work differently based on the object or data it is working with. 
+There are two types of polymorphism: compile-time and runtime. 
+Compile-time polymorphism is also called method overloading, where we write multiple methods with the same name but different parameters in the same class. 
+For example, a method add(int a, int b) and another add(double a, double b) are overloaded methods. 
+Runtime polymorphism is called method overriding, where a child class changes the behavior of a method from the parent class. 
+For example, if Animal has a method sound(), and Cat overrides it to say "Meow", then if we call sound() on a Cat object, it will say "Meow". 
+Polymorphism helps make code more flexible and easier to manage.
