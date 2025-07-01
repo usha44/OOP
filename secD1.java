@@ -1,45 +1,39 @@
-// 2. Design a Java class called Student with attributes id, name, and marks:
-// ● Create a method to calculate the grade based on marks using this rule:
-// ○ 80+ : A
-// ○ 60–79 : B
-// ○ 40–59 : C
-// ○ Below 40 : F
-// ● Create multiple student objects and display their grades.
+// 1. Write a Java program that demonstrates constructor overloading.
+// ● Create a Product class with attributes like id, name, and price.
+// ● Provide multiple constructors to initialize these attributes differently.
+// ● Display the product details using a method.
 
-class Student {
+
+class Product {
     int id;
     String name;
-    int marks;
-    public Student(int id, String name, int marks) {
+    double price;
+    Product() {
+        id = 0;
+        name = "Book";
+        price = 0.0;
+    }
+    Product(int id, String name) {
         this.id = id;
         this.name = name;
-        this.marks = marks;
-    }
-    public char calculateGrade() {
-        if (marks >= 80) {
-            return 'A';
-        } else if (marks >= 60) {
-            return 'B';
-        } else if (marks >= 40) {
-            return 'C';
-        } else {
-            return 'F';
-        }
-    }
-    public void display() {
-        System.out.println("ID: " + id + ", Name: " + name + ", Marks: " + marks + ", Grade: " + calculateGrade());
+        this.price = 0.0;
     }
 
+    Product(int id, String name, double price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+    void display() {
+        System.out.println("ID: " + id + ", Name: " + name + ", Price: " + price);
+    }
     public static void main(String[] args) {
-       
-        Student s1 = new Student(101, "Manita", 85);
-        Student s2 = new Student(102, "Pooja", 75);
-        Student s3 = new Student(103, "Usha", 55);
-        Student s4 = new Student(104, "Nischal", 35);
+        Product p1 = new Product();
+        Product p2 = new Product(101, "Pen");
+        Product p3 = new Product(102, "Notebook", 49.99);
 
-        s1.display();
-        s2.display();
-        s3.display();
-        s4.display();
+        p1.display();
+        p2.display();
+        p3.display();
     }
 }

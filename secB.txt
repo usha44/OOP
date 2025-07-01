@@ -1,22 +1,39 @@
-1. Explain the difference between abstract class and interface in Java. Provide one example for
-each.
+secB 1. Explain method overloading in Java with examples. How is it different from method
+overriding?
+In Java, method overloading means having multiple methods with the same name but different parameter lists in the same class. 
+It is a way to perform a similar operation in different ways depending on the input. 
+For example, we can create a method add(int a, int b) to add integers and another method add(double a, double b) to add decimal numbers. 
+The compiler determines which version to call based on the arguments provided.
 
-An abstract class in Java is a class that can have both normal methods and abstract methods (methods without a body). 
-It can also have variables and constructors. We use abstract classes when we want to share common code among related classes. 
-On the other hand, an interface only has method declarations by default, and classes that use it must provide the method body. 
-Interfaces are mainly used to define rules or capabilities that other classes can follow. 
-One main difference is that a class can only extend one abstract class, but it can implement many interfaces. 
-For example, we can have an abstract class Animal with a method eat(), and a class Dog can extend it and add its own behavior. 
-Similarly, an interface Flyable can have a method fly(), and a class Bird can implement it to show how birds fly.
+On the other hand, method overriding occurs when a subclass provides its own version of a method that is already defined in the parent class. 
+The method must have the same name, return type, and parameters. This allows the subclass to change or extend the behavior of the method. 
+For example, a base class Animal might have a method makeSound(), and the Dog class can override it to give a specific implementation. 
+The main difference is that overloading is done within the same class and is resolved at compile time, whereas overriding happens between a subclass and superclass and is resolved at runtime.
 
-2. Describe the concept of polymorphism in Java with suitable examples. Differentiate between
-compile-time and runtime polymorphism.
+2. What is the role of the super keyword in Java? Demonstrate its usage with a code example.
 
-Polymorphism in Java means one thing behaving in different ways. 
-It lets the same method work differently based on the object or data it is working with. 
-There are two types of polymorphism: compile-time and runtime. 
-Compile-time polymorphism is also called method overloading, where we write multiple methods with the same name but different parameters in the same class. 
-For example, a method add(int a, int b) and another add(double a, double b) are overloaded methods. 
-Runtime polymorphism is called method overriding, where a child class changes the behavior of a method from the parent class. 
-For example, if Animal has a method sound(), and Cat overrides it to say "Meow", then if we call sound() on a Cat object, it will say "Meow". 
-Polymorphism helps make code more flexible and easier to manage.
+The super keyword in Java is used to refer to the parent class of the current object. 
+It is especially useful when a subclass wants to call the constructor or method of its superclass. 
+This helps in reusing code and maintaining the relationship between parent and child classes. 
+For example, if a parent class Animal has a constructor and a method speak(), the subclass Dog can use super() 
+to call the parent constructor and super.speak() to call the parent's method inside the child class.
+class Animal {
+    Animal() {
+        System.out.println("Animal Constructor");
+    }
+
+    void speak() {
+        System.out.println("Animal speaks");
+    }
+}
+
+class Dog extends Animal {
+    Dog() {
+        super(); 
+        System.out.println("Dog Constructor");
+    }
+
+    void show() {
+        super.speak(); 
+    }
+}

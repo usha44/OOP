@@ -1,20 +1,25 @@
-a. final keyword
-The final keyword in Java is used to make something constant. 
-If we use final with a variable, its value can not be changed. 
-If we use it with a method, it can not be overridden, and with a class, it can not be inherited.
-Example: final int x = 10; means x can not be changed.
+secC a. Java Class and Object
+A class is like a blueprint or template that defines the structure and behavior of objects. 
+It contains variables (attributes) and methods (functions). 
+An object is an instance of a class that holds real data. 
+For example, if Car is a class, then a specific car like "Honda" is an object of that class. 
+We can create multiple objects from one class.
 
-b. Getter and Setter Methods
-Getter and Setter methods are used to get and set values of private variables in a class. 
-They help in hiding the data (encapsulation). 
-The getter method returns the value, and the setter method updates it.
-Example: getName() to get a name and setName() to set it.
+b. Constructor Overloading
+Constructor overloading in Java means having more than one constructor in the same class with different parameters. 
+It allows us to create objects in different ways. 
+For example, we can create one constructor with no arguments and another with two arguments to initialize values. 
+The correct constructor is called depending on how the object is created.
 
-c. Inheritance
-Inheritance is a concept where one class can use the features (like variables and methods) of another class. 
-It helps to reuse code. We use the extends keyword to do inheritance.
-Example: class Dog extends Animal means Dog gets features of Animal.
+d. Importance of the main method
+The main method in Java is the starting point of any program. 
+The syntax is public static void main(String[] args). 
+When we run a Java program, the JVM looks for the main method and starts executing the code from there. 
+Without it, the program won’t run unless another entry point is defined.
 
-d. try-catch block
-The try-catch block is used in Java to handle errors during program execution. We write risky code in try, and if it causes an error, catch runs and shows a message instead of crashing the program.
-Example: try { int a = 5/0; } catch (Exception e) { }
+e. Logical Operators in Java
+Logical operators are used to perform logical operations on boolean values. The main logical operators in Java are:
+&& (AND): returns true if both conditions are true
+|| (OR): returns true if at least one condition is true
+! (NOT): reverses the boolean value
+They are mostly used in conditions and loops to make decisions.

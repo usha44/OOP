@@ -1,12 +1,12 @@
-1. C
-2. B
-3. C
-4. B
-5. D
-6. C
-7. A
-8. B
-9. D
-10. A
-11. C
-12. B
+1. int arr[] = {1, 2, 3};
+2. 2 (5 / 2 gives 2 because both are integers)
+3. extends
+4. public
+5. Compilation (it's not an OOP feature)
+6. Defining a method in a subclass that already exists in the parent class
+7. 8 (++x is a pre-increment)
+8. char
+9. 4 ("Java".length() returns 4)
+10. Hiding implementation details and exposing only necessary parts
+11. implements
+12. do-while
